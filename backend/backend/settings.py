@@ -8,13 +8,13 @@ STATIC_URL = '/static/'
 # в контейнере это будет /app/collected_static
 STATIC_ROOT = BASE_DIR / 'collected_static'
 # Теперь при вызове команды python manage.py collectstatic
-# Django будет копировать все статические файлы в директорию collected_static 
+# Django будет копировать все статические файлы в директорию collected_static
 
 SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-#ALLOWED_HOSTS = ["localhost", "123.123.123.123", "127.0.0.1", "51.250.16.255"]
+# ALLOWED_HOSTS = ["localhost", "123.123.123.123", "127.0.0.1", "51.250.16.255"]
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
